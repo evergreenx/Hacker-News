@@ -2,7 +2,13 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+
     extend: {
+
+      fontSize: {
+
+        xxs: "0.625rem"
+      } , 
       colors: {
         primary: "#fbc91b",
         secondary: "#F2F2F2",
