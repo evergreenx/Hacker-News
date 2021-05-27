@@ -25,6 +25,20 @@ export default function Home() {
         description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis.'}
         
         />
+
+
+<Card header={'Lorem Ipsum is simply dummy text.'}
+        description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis.'}
+        
+        />
+
+<Card header={'Lorem Ipsum is simply dummy text.'}
+        description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis.'}
+        
+        />
+
+
+        
       </div>
 
       <Footer/>

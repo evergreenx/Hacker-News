@@ -2,21 +2,21 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    
     extend: {
-      colors:{
-        'primary':'#fbc91b',
-'secondary':'#F2F2F2'
-
-      
+      colors: {
+        primary: "#fbc91b",
+        secondary: "#F2F2F2",
+        ever:'rgba(0, 0, 0, 0.82)'
       },
       margin: {
-        '13': '4rem',
-       }
+        13: "4rem",
+      },
+
+
     },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};
