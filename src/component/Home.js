@@ -1,4 +1,5 @@
 import React from "react";
+import { Card } from "./Card";
 import Footer from "./Footer";
 import Header from "./Header";
 
@@ -9,7 +10,7 @@ export default function Home() {
 
       <div className="container mx-auto px-4 py-5 flex-grow">
         <div class="flex justify-start">
-          <button className="mx-5 rounded-full bg-primary font-bold py-1 text-base px-6 focus:outline-none">
+          <button className="mr-5 rounded-full bg-primary font-bold py-1 text-base px-6 focus:outline-none">
             New
           </button>
 
@@ -17,6 +18,13 @@ export default function Home() {
             Past
           </button>
         </div>
+
+
+
+        <Card header={'Lorem Ipsum is simply dummy text.'}
+        description={'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis.'}
+        
+        />
       </div>
 
       <Footer/>
