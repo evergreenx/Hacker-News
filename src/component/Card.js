@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Card = ({ header, description, detail, url ,time , kids}) => {
+export const Card = ({ header, description, detail, url, time, kids }) => {
   return (
     <div className=" px-4 py-10  rounded-xl relative shadow-lg mt-8 lg:w-full md:w-full bg-white ">
       <a href={url} className="text-xs font-bold">
@@ -19,10 +19,11 @@ export const Card = ({ header, description, detail, url ,time , kids}) => {
           alt=""
           className="mr-1"
         />
-        {new Date(time * 1000).toLocaleDateString('en-US', {
-            hour: 'numeric',
-            minute: 'numeric'
-          })} | {`${kids && kids.length > 0 ? kids.length : 0}`} comments
+        {new Date(time * 1000).toLocaleDateString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+        })}{" "}
+        | {`${kids && kids.length > 0 ? kids.length : 0}`} comments
       </div>
     </div>
   );
