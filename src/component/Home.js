@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "./Card";
 import Footer from "./Footer";
 import Header from "./Header";
 
-export default function Home({ data }) {
+export default function Home({ data, loading }) {
+  const loadMoreNews = () => {
+    setState((prev) => prev + 2);
+  };
+  const [state, setState] = useState(2);
+
   return (
     <>
       <Header />
@@ -19,19 +24,38 @@ export default function Home({ data }) {
           </button>
         </div>
 
-        {data.map((i) => (
-          <Card
-            header={i.data.title}
-            key={i.data.id}
-            description={
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis."
-            }
-            url={i.data.url}
-            time={i.data.time}
-            kids={i.data.kids}
-          />
-        ))}
+        {loading ? (
+          <div className=" px-4 py-10 animate animate-pulse rounded-xl relative shadow-lg mt-8 w-80 sm:w-full md:w-full bg-white flex justify-center">
+            <h1 className="text-4xl">Fetching News</h1>
+          </div>
+        ) : (
+          data
+            .slice(0, state)
+            .map((i) => (
+              <Card
+                header={i.data.title}
+                key={i.data.id}
+                description={
+                  "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe eum quo reprehenderit ipsum ipsa dolores assumenda consectetur quis soluta necessitatibus in dicta consequuntur maiores odit dolorum ad inventore, labore omnis."
+                }
+                url={i.data.url}
+                time={i.data.time}
+                kids={i.data.kids}
+              />
+            ))
+        )}
       </div>
+
+      {loading ? null : (
+        <div className="container flex justify-center">
+          <button
+            className="bg-primary text-center rounded-xl text-base  font-bold   px-28 py-3"
+            onClick={loadMoreNews}
+          >
+            Load More
+          </button>
+        </div>
+      )}
 
       <Footer />
     </>
