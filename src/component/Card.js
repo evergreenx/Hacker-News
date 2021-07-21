@@ -17,7 +17,7 @@ export const Card = ({ header, description, detail, url, time, kids }) => {
         <img
           src="https://res.cloudinary.com/evergreenx/image/upload/v1626707121/clock_4_ekqynm.svg"
           alt=""
-          className="mr-1"
+          className="mr-1 h-auto w-auto"
         />
         {new Date(time * 1000).toLocaleDateString("en-US", {
           hour: "numeric",
