@@ -13,7 +13,7 @@ export default function Home({ data, loading }) {
     <>
       <Header />
 
-      <div className="container mx-auto px-4 py-5 flex-grow">
+      <section className="container mx-auto px-4 py-5 flex-grow">
         <div className="flex justify-start">
           <button className="mr-5 rounded-full bg-primary font-bold py-1 text-base px-6 focus:outline-none">
             New
@@ -44,7 +44,7 @@ export default function Home({ data, loading }) {
               />
             ))
         )}
-      </div>
+      </section>
 
       {loading ? null : (
         <div className="container flex justify-center">

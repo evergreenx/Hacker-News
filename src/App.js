@@ -36,9 +36,9 @@ function App() {
     getStories();
   });
   return (
-    <div className="App w-full flex flex-col min-h-screen">
+    <main className="App w-full flex flex-col min-h-screen">
       <Home data={storiesFromApi} loading={loading} />
-    </div>
+    </main>
   );
 }
 

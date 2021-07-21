@@ -7,13 +7,13 @@ export const Card = ({ header, description, detail, url, time, kids }) => {
         {header}
       </a>
 
-      <p className="text-xxs text-ever font-normal leading-4 mt-3">
+      <p className="text-xs text-ever font-normal leading-4 mt-3">
         {description}
       </p>
 
       <span>{detail}</span>
 
-      <div className="text-xxs font-normal text-gray-500 mt-3 flex">
+      <div className="text-xs font-normal text-gray-500 mt-3 flex">
         <img
           src="https://res.cloudinary.com/evergreenx/image/upload/v1626707121/clock_4_ekqynm.svg"
           alt=""
@@ -25,12 +25,6 @@ export const Card = ({ header, description, detail, url, time, kids }) => {
         })}{" "}
         | {`${kids && kids.length > 0 ? kids.length : 0}`} comments
       </div>
-
-
-      
-
-
-
     </div>
   );
 };
