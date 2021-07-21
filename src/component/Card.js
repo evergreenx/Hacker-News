@@ -25,6 +25,12 @@ export const Card = ({ header, description, detail, url, time, kids }) => {
         })}{" "}
         | {`${kids && kids.length > 0 ? kids.length : 0}`} comments
       </div>
+
+
+      
+
+
+
     </div>
   );
 };
