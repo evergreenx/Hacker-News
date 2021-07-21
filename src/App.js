@@ -14,27 +14,27 @@ function App() {
       const story = await axios.get(`${BASE_API_URL}/item/${id}.json`);
       return story;
     } catch (error) {
-      console.log("Error while getting a story.");
+      // console.log("Error while getting a story.");
     }
   };
 
-  const getStories = async () => {
-    try {
-      const { data: storyIds } = await axios.get(
-        `${BASE_API_URL}/${"new"}stories.json?print=pretty`
-      );
-      const stories = await Promise.all(storyIds.slice(0, 30).map(getStory));
-
-      setLoading(false);
-      console.log(stories);
-      setStoriesFromAp(stories);
-    } catch (error) {
-      console.log("Error while getting list of stories.");
-    }
-  };
   useEffect(() => {
+    const getStories = async () => {
+      try {
+        const { data: storyIds } = await axios.get(
+          `${BASE_API_URL}/${"new"}stories.json?print=pretty`
+        );
+        const stories = await Promise.all(storyIds.slice(0, 30).map(getStory));
+
+        setLoading(false);
+        // console.log(stories);
+        setStoriesFromAp(stories);
+      } catch (error) {
+        // console.log("Error while getting list of stories.");
+      }
+    };
     getStories();
-  }, []);
+  });
   return (
     <div className="App w-full flex flex-col min-h-screen">
       <Home data={storiesFromApi} loading={loading} />
